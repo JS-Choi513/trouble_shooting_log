@@ -59,7 +59,9 @@ history = model.fit_generator(
 그다음에 훈련한번 돌리면 위에서 지정한 경로에 로그파일이 생성된다. 
 
 이렇게 
+
 ![](https://user-images.githubusercontent.com/32115744/115707603-f929d180-a3a9-11eb-8df4-e52ace1c3873.png) 
+
 필자의 경우 train, validation 으로 코드를 구성했기 때문에 2개가 생성되었다.
 
 텐서보드 실행은 터미널에서 명령한줄만 입력하면 된다. 
