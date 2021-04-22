@@ -52,7 +52,7 @@ history = model.fit_generator(
     class_weight = class_weights_index,
     use_multiprocessing = True,
     epochs = 1,
-    callbacks=[tensorboard_callback])
+    callbacks=[tensorboard_callback]
 ```
 마지막에 ```callbacks=[tensorboard_callback])``` 만 추가해주면 된다.  
 그다음에 훈련한번 돌리면 위에서 지정한 경로에 로그파일이 생성된다. 
