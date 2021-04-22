@@ -26,8 +26,9 @@ $ nvidia-smi
 ```{.python}
 import datetime
 ...
-#model.compile...![](2021-04-22 20-44-02](https://user-images.githubusercontent.com/32115744/115708879-802b7980-a3ab-11eb-8fcf-f562b759c1f2.png) 
+#model.compile...
 ...
+
 # Tensorboard setting
 log_dir = "/media/js/test/log/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
 tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1,
@@ -36,7 +37,7 @@ tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram
 #model.fit...
 							
 ```
-위 코드는 텐서보드가 읽을 로그파일 이름과 경로를 지정하는 부분이다. 경로는 코드가 실행되는 위치에서 log라는 디렉터리를 생성하여 **절대경로**로 지정했다.
+위 코드는 텐서보드가 읽을 로그파일 이름과 경로를 지정하는 부분이다. 경로는 코드가 실행되는 위치에서 log라는 디렉터리를 생성하여 **절대경로**로 지정했다. (#Tensorboard setting 부분 코드만 작성하면 된다. )
  **절.대.경.로** 로 지정하는것이 중요하다.
  다음은```datetime``` 라이브러리를 사용하여 생성될 로그파일의 이름을 지정했다.  실행시점의 날짜가 로그파일의 이름으로 지정된다.  
  나머지도 그대로 따라 작성하면 된다. 자세한 기능은 위 공식문서 링크를 참조할 것. 
