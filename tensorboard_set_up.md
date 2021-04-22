@@ -71,11 +71,13 @@ $ tensorboard --logdir=/media/js/test/log/20210422-174828
 물론 본인이 지정한 경로로 바꿔서 실행하면 된다. 
 그러면 이렇게 출력되는데 
 ![](https://user-images.githubusercontent.com/32115744/115708879-802b7980-a3ab-11eb-8fcf-f562b759c1f2.png) 
+
 여기서 브라우저를 실행한 다음 ```http://localhost:6006/``` 으로 접속하면 텐서보드를 확인할 수 있다. 
 
 ![](https://user-images.githubusercontent.com/32115744/115709195-e0222000-a3ab-11eb-8bf8-20abdb768bfa.png) 
 ## 문제점
 필자의 경우에는 텐서보드를 사용하려고 했던 이유가 Profile 기능인데 이부분이 실행되지 않았다. 
+
 다행히도 플러그인이 설치되지 않아서 설치하라고 텐서보드가 친절하게 알려주었다. 
 ![](https://user-images.githubusercontent.com/32115744/115709479-3abb7c00-a3ac-11eb-807f-6826218295db.png) 
 
@@ -99,15 +101,15 @@ SyntaxError: invalid syntax
 Serving TensorBoard on localhost; to expose to the network, use a proxy or pass --bind_all
 TensorBoard 2.4.1 at http://localhost:6006/ (Press CTRL+C to quit)
 ```
-방금설치한 플러그인 코드에서 stntax error 가 발생해서 로드할수 없다고 한다. 
+방금설치한 플러그인 코드에서 syntax error 가 발생해서 로드할수 없다고 한다. 
 ## 해결방법
-낮은 버전의 플러그인을 찾아서 설치하니 해결되었다.  [여기](https://pypi.org/project/tensorboard-plugin-profile/2.2.0/#history) 에서 버전 정보를 확인할 수 있었는데 2.2.0버전을 설치하니까 해결되었다. 
+낮은 버전의 플러그인을 찾아서 설치하니 해결되었다.  [여기](https://pypi.org/project/tensorboard-plugin-profile/2.2.0/#history)에서 버전 정보를 확인할 수 있었는데 2.2.0버전을 설치하니까 해결되었다. 
 
 #### * 기존플러그인 삭제
 
 ```python3 -m pip uninstall tensorboard-plugin-profile```
 
-####* 2.2.0버전 설치
+#### * 2.2.0버전 설치
 
 ```pip install tensorboard-plugin-profile==2.2.0```
 
