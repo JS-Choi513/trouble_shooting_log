@@ -25,5 +25,8 @@ Aborted (core dumped)
   - 해결: matplotlib을 3.5.0버전으로 낮추니 정상적으로 실행되는듯 
   - 원인: pyqt로 동작하는 matplotlib가 qt관련 플러그인을 못찾음 -> 왜 그런지는 모름(cv2, anaconda 설치과정에 무언가 꼬였을 가능성)
   
-  > pip uninstall matplotlib
-  > pip install matplotlib==3.5.0
+  ```
+  pip uninstall matplotlib
+  
+  pip install matplotlib==3.5.0
+  ```
