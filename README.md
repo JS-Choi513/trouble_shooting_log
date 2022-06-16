@@ -6,7 +6,7 @@
     maybe version issue
   - https://github.com/opencv/opencv-python/issues/602#issuecomment-1070290110
 
-# 6.14 matplotlib error
+# 6.14 Matplotlib error
   - 에러로그 
 
 ```
