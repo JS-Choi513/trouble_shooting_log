@@ -21,9 +21,10 @@ Aborted (core dumped)
   
   - 발생원인: 일단 잘 모르겠음, anaconda3 가상환경 써보겠다고 설치한 다음 opencv로 불러온 이미지를 확인하기 위해 matplot 코드 사용시 위와같은 증상 발생 
   - 처음에는 opencv 문제로 예상, 에러로그로 웹에서 뒤져봤을 때, opencv 버전을 낮춰서 해결한 사례가 있었음 -> 해결불가 
+  - 
+  - 원인: pyqt로 동작하는 matplotlib가 qt관련 플러그인을 못찾음 -> 왜 그런지는 모름(cv2, anaconda 설치과정에 무언가 꼬였을 가능성)
 
   - 해결: matplotlib을 3.5.0버전으로 낮추니 정상적으로 실행되는듯 
-  - 원인: pyqt로 동작하는 matplotlib가 qt관련 플러그인을 못찾음 -> 왜 그런지는 모름(cv2, anaconda 설치과정에 무언가 꼬였을 가능성)
   
   ```
   pip uninstall matplotlib
@@ -41,4 +42,12 @@ Aborted (core dumped)
     <img width="40%" src="https://user-images.githubusercontent.com/32115744/174229704-2795995f-9196-4fc1-9c74-84e72d8657b9.png"/>
     <img width="40%" src="https://user-images.githubusercontent.com/32115744/174228762-2d439768-5ad6-4f8b-bfaa-0ba11be55255.png"/>
   </p>
-    
+  
+  - 원인: 이미지를 임의로 그레이스케일로 변경하여 출력하면 이미지 가로, 세로, 채널 shape은 (28,28,3)에서 (28,28,1)로 변경됨, 
+  - plt.imshow()는 RGB 형식을 입력으로 받기때문에 채널 두개가 빠진 흑백이미지를 입력받아도 3채널 이미지로 출력되면서 색이 이상하게 바뀜 
+  - https://stackoverflow.com/questions/51303361/color-rgb2gray-gives-none-grayscale-image-might-be-an-issue-with-jupyter-notebo
+
+  - 해결: plt.imshow()에 옵션추가
+  ```
+  plt.imshow(img, cmap='gray', vmin=0, vmax=255)
+  ```
