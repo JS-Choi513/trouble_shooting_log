@@ -38,7 +38,7 @@ Aborted (core dumped)
   - 기대한 이미지 출력결과, 잘못 출력된 결과
 
   <p align="center" width="100%">
-    <img width="50%" src="https://user-images.githubusercontent.com/32115744/174229254-f2060721-024e-410d-856a-cb2012ae1e63.png"/>
-    <img width="50%" src="https://user-images.githubusercontent.com/32115744/174228762-2d439768-5ad6-4f8b-bfaa-0ba11be55255.png"/>
+    <img width="40%" src="https://user-images.githubusercontent.com/32115744/174229254-f2060721-024e-410d-856a-cb2012ae1e63.png"/>
+    <img width="40%" src="https://user-images.githubusercontent.com/32115744/174228762-2d439768-5ad6-4f8b-bfaa-0ba11be55255.png"/>
   </p>
     
