@@ -32,8 +32,8 @@ Aborted (core dumped)
   ```
   
  # 6.17 Matplot image output issue
-  - 발생경위
-  BGR 이미지를 cv.imread()로 읽어서 RGB로 변환한 이미지를 cvtColor()로 그레이 스케일로 변환함, 그 상태에서 matplot으로 이미지 출력 시 흑백이미지로 표시되지 않는 문제가 발생
+  - 발생경위:
+  - BGR 이미지를 cv.imread()로 읽어서 RGB로 변환한 이미지를 cvtColor()로 그레이 스케일로 변환함, 그 상태에서 matplot으로 이미지 출력 시 흑백이미지로 표시되지 않는 문제가 발생
   
   - 잘못 출력된 이미지 
-  - ![Wrong_img](https://user-images.githubusercontent.com/32115744/174228762-2d439768-5ad6-4f8b-bfaa-0ba11be55255.png)
+  ![Wrong_img](https://user-images.githubusercontent.com/32115744/174228762-2d439768-5ad6-4f8b-bfaa-0ba11be55255.png)
