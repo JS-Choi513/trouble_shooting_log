@@ -51,3 +51,12 @@ Aborted (core dumped)
   ```
   plt.imshow(img, cmap='gray', vmin=0, vmax=255)
   ```
+ # 8.29 Linux grep text filtering 
+  - 발생경위: iostat 커맨드에서 평균 CPU 사용량을 grep으로 가져오려고 함. 
+  ```
+  iostat | grep avg-cpu  
+  출력 결과 : avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+  컬럼만 출력되고 실제 수치는 다음 행에 출력됨 
+  ```
+  - 해결: grep에 후행출력 옵션 사용 
+  iostat | grep -A 1 avg-cpu | grep -v avg-cpu -> -A 1: 타겟 행의 다음 행 출력  -v avg-cpu: "avg-cpu" 패턴과 매칭되지 않는 행 출력(컬럼 행 제거)
